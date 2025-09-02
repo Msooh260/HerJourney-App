@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Pregnancy tracking app design system with soft purple palette */
+
+@layer base {
+  :root {
+    /* Purple-based design system inspired by Flo */
+    --background: 270 100% 99%;
+    --background-tint: 270 100% 97%;
+    --foreground: 264 84% 15%;
+
+    --card: 270 100% 97%;
+    --card-soft: 270 60% 95%;
+    --card-medium: 270 45% 87%;
+    --card-foreground: 264 84% 15%;
+
+    --popover: 270 100% 99%;
+    --popover-foreground: 264 84% 15%;
+
+    --primary: 264 84% 49%;
+    --primary-soft: 264 60% 70%;
+    --primary-foreground: 270 100% 99%;
+
+    --secondary: 270 45% 87%;
+    --secondary-foreground: 264 84% 15%;
+
+    --muted: 270 45% 92%;
+    --muted-foreground: 264 20% 55%;
+
+    --accent: 270 60% 80%;
+    --accent-foreground: 264 84% 15%;
+    --accent-strong: 264 70% 65%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 270 100% 99%;
+
+    --success: 140 60% 50%;
+    --success-foreground: 270 100% 99%;
+
+    --warning: 35 84% 62%;
+    --warning-foreground: 270 100% 99%;
+
+    --border: 270 30% 85%;
+    --input: 270 30% 85%;
+    --ring: 264 84% 49%;
+
+    --radius: 1rem;
+
+    /* Gradients for beautiful backgrounds */
+    --gradient-primary: linear-gradient(135deg, hsl(264 84% 49%), hsl(264 60% 70%));
+    --gradient-soft: linear-gradient(135deg, hsl(270 100% 97%), hsl(270 60% 95%));
+    --gradient-card: linear-gradient(135deg, hsl(264 84% 49% / 0.9), hsl(264 60% 70% / 0.95));
+    
+    /* Shadows */
+    --shadow-card: 0 4px 20px -4px hsl(264 84% 49% / 0.1);
+    --shadow-elevated: 0 8px 30px -8px hsl(264 84% 49% / 0.15);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  }
+
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
